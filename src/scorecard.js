@@ -3,6 +3,7 @@
 class Scorecard {
   constructor() {
     this.rolls = [];
+    this.total = 0;
   };
 
   roll = pins => {
@@ -14,7 +15,14 @@ class Scorecard {
   };
 
   score = () => {
-    return this.rolls.reduce((total, amount) => total + amount);
+    for(let i = 0; i < 20; i+=2) {
+      if(this.rolls[i] + this.rolls[i+1] === 10) {
+        this.total += this.rolls[i] + this.rolls[i+1] + this.rolls[i+2]
+      } else {
+        this.total += this.rolls[i] + this.rolls[i+1]
+      };
+    };
+    return this.total;
   };
 
 };
