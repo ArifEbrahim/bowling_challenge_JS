@@ -31,8 +31,16 @@ describe('Scorecard', () => {
     it('returns 0 for a gutter game', () => {
       for (let i = 0; i < 20; i++) {
         scorecard.roll(0)
-      }
+      };
       expect(scorecard.score()).toEqual(0);
+    });
+
+    it('retuns the score for a normal game', () => {
+      for (let i = 0; i < 20; i++) {
+        scorecard.roll(2)
+      };
+      expect(scorecard.score()).toEqual(40);
+
     });
   });
 

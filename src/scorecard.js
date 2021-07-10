@@ -13,6 +13,8 @@ class Scorecard {
     };
   };
 
-  score = () => 0;
+  score = () => {
+    return this.rolls.reduce((total, amount) => total + amount);
+  };
 
 };
