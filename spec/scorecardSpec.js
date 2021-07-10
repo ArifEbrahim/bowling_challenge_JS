@@ -76,6 +76,17 @@ describe('Scorecard', () => {
       };
       expect(scorecard.score()).toEqual(40);
     });
+
+    it('when there are 3 strikes', () => {
+      scorecard.roll(10);
+      scorecard.roll(10);
+      scorecard.roll(10);
+      for (let i = 0; i < 14; i++) {
+        scorecard.roll(0);
+      };
+      expect(scorecard.score()).toEqual(60);
+    });
+
   });
 
 
