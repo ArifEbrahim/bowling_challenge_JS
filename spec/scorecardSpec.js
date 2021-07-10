@@ -27,6 +27,15 @@ describe('Scorecard', () => {
     });
   });
 
+  describe('when there is no special scoring', () => {
+    it('returns 0 for a gutter game', () => {
+      for (let i = 0; i < 20; i++) {
+        scorecard.roll(0)
+      }
+      expect(scorecard.score()).toEqual(0);
+    });
+  });
+
 
 
 

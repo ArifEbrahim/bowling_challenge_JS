@@ -13,6 +13,6 @@ class Scorecard {
     };
   };
 
-  score = () => nil;
+  score = () => 0;
 
 };
