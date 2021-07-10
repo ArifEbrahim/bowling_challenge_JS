@@ -5,5 +5,13 @@ class Scorecard {
     this.rolls = [];
   };
 
-  roll = pins => this.rolls.push(pins);
+  roll = pins => {
+    if(pins > 10) {
+      throw new Error('More than 10 pins detected, please check your roll');
+    } else {
+      this.rolls.push(pins);
+    };
+  };
+
+
 };
