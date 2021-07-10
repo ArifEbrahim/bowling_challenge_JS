@@ -36,7 +36,9 @@ class Scorecard {
   _isStrike = (i) => this.rolls[i] === 10;
 
   _strikeBonus = (i) => {
-    if (this._isStrike(i) && this._isStrike(i+2)) {
+    if (this._isStrike(i) && this._isStrike(i+2) && this._isStrike(i+4)) {
+      this.total += 30
+    } else if (this._isStrike(i) && this._isStrike(i+2)) {
       this.total += this.rolls[i] + this.rolls[i+2] + this.rolls[i+4];
     } else {
       this.total += this.rolls[i] + this.rolls[i+2] + this.rolls[i+3];

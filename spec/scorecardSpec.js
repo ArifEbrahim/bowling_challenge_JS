@@ -128,6 +128,16 @@ describe('Scorecard', () => {
       expect(scorecard.score()).toEqual(22);
     });
 
+    it('with 3 strikes', () => {
+      for (let i = 0; i < 18; i++) {
+        scorecard.roll(0);
+      };
+      scorecard.roll(10);
+      scorecard.roll(10);
+      scorecard.roll(10);
+      expect(scorecard.score()).toEqual(30);
+    });
+
   });
 
 
