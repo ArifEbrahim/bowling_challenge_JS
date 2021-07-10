@@ -43,8 +43,8 @@ describe('Scorecard', () => {
     });
   });
 
-  describe('when there is a spare', () => {
-    it('returns the correct score', () => {
+  describe('returns the correct score', () => {
+    it('when there is a spare', () => {
       scorecard.roll(5);
       scorecard.roll(5);
       scorecard.roll(2);
@@ -52,6 +52,18 @@ describe('Scorecard', () => {
         scorecard.roll(0);
       };
       expect(scorecard.score()).toEqual(14);
+    });
+  });
+
+  describe('returns the correct score', () => {
+    it('when there is 1 strike', () => {
+      scorecard.roll(10);
+      scorecard.roll(2);
+      scorecard.roll(2);
+      for (let i = 0; i < 16; i++) {
+        scorecard.roll(0);
+      };
+      expect(scorecard.score()).toEqual(18);
     });
   });
 
