@@ -86,7 +86,17 @@ describe('Scorecard', () => {
       };
       expect(scorecard.score()).toEqual(60);
     });
+  });
 
+  describe('returns the correct score for frame 10', () => {
+    it('with no special scoring', () => {
+      for (let i = 0; i < 18; i++) {
+        scorecard.roll(0);
+      };
+      scorecard.roll(2);
+      scorecard.roll(2);
+      expect(scorecard.score()).toEqual(4);
+    });
   });
 
 
