@@ -97,6 +97,17 @@ describe('Scorecard', () => {
       scorecard.roll(2);
       expect(scorecard.score()).toEqual(4);
     });
+
+    it('with a spare', () => {
+      for (let i = 0; i < 18; i++) {
+        scorecard.roll(0);
+      };
+      scorecard.roll(5);
+      scorecard.roll(5);
+      scorecard.roll(2);
+      expect(scorecard.score()).toEqual(12);
+    });
+
   });
 
 
