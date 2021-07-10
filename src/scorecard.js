@@ -17,6 +17,9 @@ class Scorecard {
   };
 
   score = () => {
+    if(this.rolls.length < 20) {
+      throw new Error('The game has not ended yet, please enter more rolls');
+    };
     for(let i = 0; i < 20; i+=2) {
       if (this._isStrike(i)) {
         this._strikeBonus(i);

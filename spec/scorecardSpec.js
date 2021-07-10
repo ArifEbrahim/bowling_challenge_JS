@@ -19,10 +19,13 @@ describe('Scorecard', () => {
     });
   });
 
-
   describe('score method', () => {
     it('has a score method', () => {
       expect(scorecard.score).toBeDefined();
+    });
+
+    it('throws an error if called before the end of the game', () => {
+      expect(() => {scorecard.score();}).toThrowError('The game has not ended yet, please enter more rolls')
     });
   });
 
@@ -137,8 +140,29 @@ describe('Scorecard', () => {
       scorecard.roll(10);
       expect(scorecard.score()).toEqual(30);
     });
-
   });
 
+  it('passes the Makers stress test', () => {
+    scorecard.roll(1);
+    scorecard.roll(4);
+    scorecard.roll(4);
+    scorecard.roll(5);
+    scorecard.roll(6);
+    scorecard.roll(4);
+    scorecard.roll(5);
+    scorecard.roll(5);
+    scorecard.roll(10);
+    scorecard.roll(0);
+    scorecard.roll(1);
+    scorecard.roll(7);
+    scorecard.roll(3);
+    scorecard.roll(6);
+    scorecard.roll(4);
+    scorecard.roll(10);
+    scorecard.roll(2);
+    scorecard.roll(8);
+    scorecard.roll(6);
+    expect(scorecard.score()).toEqual(133);
+  });
 
 });
