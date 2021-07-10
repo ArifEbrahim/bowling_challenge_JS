@@ -65,6 +65,17 @@ describe('Scorecard', () => {
       };
       expect(scorecard.score()).toEqual(18);
     });
+
+    it('when there are 2 strikes', () => {
+      scorecard.roll(10);
+      scorecard.roll(10);
+      scorecard.roll(2);
+      scorecard.roll(2);
+      for (let i = 0; i < 15; i++) {
+        scorecard.roll(0);
+      };
+      expect(scorecard.score()).toEqual(40);
+    });
   });
 
 

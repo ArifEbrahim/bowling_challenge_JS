@@ -35,7 +35,13 @@ class Scorecard {
 
   _isStrike = (i) => this.rolls[i] === 10;
 
-  _strikeBonus = (i) => this.total += this.rolls[i] + this.rolls[i+2] + this.rolls[i+3];
+  _strikeBonus = (i) => {
+    if (this.rolls[i] === 10 && this.rolls[i+2] === 10) {
+      this.total += this.rolls[i] + this.rolls[i+2] + this.rolls[i+4];
+    } else {
+      this.total += this.rolls[i] + this.rolls[i+2] + this.rolls[i+3];
+    };
+  };
 
   _isSpare = (i) => this.rolls[i] + this.rolls[i+1] === 10;
 
