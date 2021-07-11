@@ -56,7 +56,7 @@ class Scorecard {
 
   _storeStrike = (pins) => {
     this._storeRoll(pins);
-    this._storeRoll(0);
+    this._storeRoll('');
   };
 
 };
