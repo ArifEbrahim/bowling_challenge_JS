@@ -29,4 +29,5 @@ Time permitting I would address the following:
 - adding further error checks e.g. user cannot score more than 10 pins per frame
 - improved UI
   - better display for the rolls array
-  
+
+Original exercise [here](https://github.com/makersacademy/bowling-challenge)
