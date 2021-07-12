@@ -4,6 +4,7 @@ class Scorecard {
   constructor() {
     this.rolls = [];
     this.total = 0;
+    this.scoreCalculated = false;
   };
 
   roll = pins => {
@@ -17,9 +18,6 @@ class Scorecard {
   };
 
   score = () => {
-    if(this.rolls.length < 20) {
-      throw new Error('The game has not ended yet, please enter more rolls');
-    };
     for(let i = 0; i < 20; i+=2) {
       if (this._isStrike(i)) {
         this._strikeBonus(i);
@@ -29,8 +27,13 @@ class Scorecard {
         this._normalScore(i);
       };
     };
+    this.scoreCalculated = true;
     return this.total;
   };
+
+  isGameOn = () => this.rolls.length < 21;
+
+  display = () => this.rolls.toString().replace(',,',',');
 
   // private methods 
 

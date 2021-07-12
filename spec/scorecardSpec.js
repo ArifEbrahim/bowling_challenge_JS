@@ -23,10 +23,6 @@ describe('Scorecard', () => {
     it('has a score method', () => {
       expect(scorecard.score).toBeDefined();
     });
-
-    it('throws an error if called before the end of the game', () => {
-      expect(() => {scorecard.score();}).toThrowError('The game has not ended yet, please enter more rolls')
-    });
   });
 
   describe('when there is no special scoring', () => {
@@ -42,7 +38,6 @@ describe('Scorecard', () => {
         scorecard.roll(2);
       };
       expect(scorecard.score()).toEqual(40);
-
     });
   });
 
@@ -164,5 +159,4 @@ describe('Scorecard', () => {
     scorecard.roll(6);
     expect(scorecard.score()).toEqual(133);
   });
-
 });
