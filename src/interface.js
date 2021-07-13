@@ -116,15 +116,4 @@ document.addEventListener("DOMContentLoaded", function() {
       document.querySelector('#score-text').innerText = `Final score: ${scorecard.score()}!`;
     }
   });
-
-
-
-
-
-
-
-
-
-
-
 });

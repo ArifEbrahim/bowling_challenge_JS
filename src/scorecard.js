@@ -31,7 +31,7 @@ class Scorecard {
     return this.total;
   };
 
-  isGameOn = () => this.rolls.length < 21;
+  isGameOn = () => this.rolls.length < 20;
 
   display = () => this.rolls.toString().replace(',,',',');
 
@@ -61,5 +61,4 @@ class Scorecard {
     this._storeRoll(pins);
     this._storeRoll('');
   };
-
 };
