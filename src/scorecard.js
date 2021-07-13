@@ -4,7 +4,7 @@ class Scorecard {
   constructor() {
     this.rolls = [];
     this.total = 0;
-    this.scoreCalculated = false;
+    this.isscoreCalculated = false;
   };
 
   roll = pins => {
@@ -27,7 +27,7 @@ class Scorecard {
         this._normalScore(i);
       };
     };
-    this.scoreCalculated = true;
+    this.isscoreCalculated = true;
     return this.total;
   };
 

@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   document.querySelector('#calc-score').addEventListener('click', () => {
-    if (scorecard.scoreCalculated) {
+    if (scorecard.isscoreCalculated) {
       alert('The game has ended, please refresh the page to start again');
     } else if(scorecard.isGameOn()) {
       let remainingRolls = 20 - scorecard.rolls.length;
