@@ -8,7 +8,7 @@ The business logic was originally designed in Ruby as part of the previous weeke
 
 Screenshot of app:
 
-![screenshot](./images/screen.png)
+![screenshot](./images/screenimg.png)
 
 ## Solution design
 
