@@ -10,7 +10,7 @@ The app is live and hosted [here](https://arifebrahim.github.io/bowling_challeng
 
 ## Screenshot
 
-![screenshot](./images/screen.png)
+![screenshot](./images/screenimg.png)
 
 ## Solution design
 

@@ -31,9 +31,9 @@ class Scorecard {
     return this.total;
   };
 
-  isGameOn = () => this.rolls.length < 20;
+  isGameOn = () => this.rolls.length < 21;
 
-  display = () => this.rolls.toString().replace(',,',',');
+  display = () => this.rolls.toString().replaceAll(',,',',');
 
   // private methods 
 
