@@ -3,7 +3,7 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-image: url(images/bowl.jpeg);
+  background-image: url('images/bowl.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 

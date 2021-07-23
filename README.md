@@ -6,7 +6,9 @@ This project builds on my learnings from the week including writing Javascript c
 
 The business logic was originally designed in Ruby as part of the previous weekend challenge and can be found [here](https://github.com/ArifEbrahim/bowling-challenge-ruby)
 
-Screenshot of app:
+The app is live and hosted [here](https://arifebrahim.github.io/bowling_challenge_JS/)
+
+## Screenshot
 
 ![screenshot](./images/screen.png)
 
